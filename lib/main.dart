@@ -103,11 +103,17 @@ class MyHomePage extends StatelessWidget {
                         SizedBox(width: 20),
                         Column(
                           children: [
-                            Text("เบอร์โทรศัพท์"),
+                            Text(
+                              "เบอร์โทรศัพท์",
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
+                            ),
                             Text(
                               "065-549-9999",
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black,
                               ),
@@ -134,11 +140,17 @@ class MyHomePage extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("วันเกิด"),
+                            Text(
+                              "วันเกิด",
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
+                            ),
                             Text(
                               "5 มีนาคม 2549",
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black,
                               ),
@@ -164,11 +176,17 @@ class MyHomePage extends StatelessWidget {
                         SizedBox(width: 20),
                         Column(
                           children: [
-                            Text("ที่อยู่"),
+                            Text(
+                              "ที่อยู่",
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.black,
+                              ),
+                            ),
                             Text(
                               "ชลบุรี",
                               style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 15,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black,
                               ),
@@ -197,7 +215,14 @@ class MyHomePage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text("การศึกษา"),
-                            Text("วิทยาลัยเทคโนโลยีภาคตะวันออก (อี.เทค)"),
+                            Text(
+                              "วิทยาลัยเทคโนโลยีภาคตะวันออก (อี.เทค)",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                              ),
+                            ),
                           ],
                         ),
                       ],
@@ -233,6 +258,108 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(body: Center(child: Text("Secord Page")));
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Container(
+                  child: ClipOval(
+                    child: Image.network(
+                      "https://wahswhirlwind.com/wp-content/uploads/2025/04/2673659_746f1.png",
+                      width: 150,
+                      height: 150,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Column(children: [Text("5"), Text("กำลังติดตาม")]),
+                ),
+                SizedBox(width: 5),
+                Container(width: 3, height: 60, color: Colors.grey),
+                SizedBox(width: 10),
+                Container(
+                  child: Column(children: [Text("5"), Text("ผู้ติดตาม")]),
+                ),
+                SizedBox(width: 10),
+                Container(width: 3, height: 60, color: Colors.grey),
+                SizedBox(width: 5),
+                Container(
+                  child: Column(children: [Text("2M"), Text("ถูกใจและบันทึก")]),
+                ),
+              ],
+            ),
+            SizedBox(height: 20),
+            Container(
+              padding: EdgeInsets.only(left: 10),
+              width: double.infinity,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Kamonthep Kaengbuan"),
+                  Icon(Icons.verified, color: Colors.blueAccent),
+                ],
+              ),
+            ),
+            SizedBox(height: 15),
+            Container(
+              padding: EdgeInsets.only(left: 10),
+              width: double.infinity,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(Icons.tiktok),
+                  Text("kamonthep001"),
+                  Icon(Icons.arrow_drop_down),
+                ],
+              ),
+            ),
+            SizedBox(height: 15),
+            Container(
+              padding: EdgeInsets.only(left: 20),
+              width: 400,
+              child: Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 10),
+                    width: 300,
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.pushNamed(context, '/second'),
+                      child: Text("ติดตาม"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.indigo,
+                        foregroundColor: Colors.white,
+                        fixedSize: Size.infinite,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Icon(Icons.share),
+                ],
+              ),
+            ),
+            SizedBox(height: 15),
+            Container(
+              child: Row(
+                children: [
+                  Image.network(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_hSbtxBeQt7e5fUhiG8lCiw9h47bmimAOtg&s",
+                    width: 200,
+                    height: 200,
+                  ),SizedBox(width: 5,),
+                  Image.network(
+                    "https://i.scdn.co/image/ab67616d00001e02b5005db1739bd89ebc9decce",
+                    width: 200,
+                    height: 200,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
