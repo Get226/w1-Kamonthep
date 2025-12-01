@@ -262,10 +262,10 @@ class SecondPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 20,),
             Row(
               children: [
                 Container(
+                  padding: EdgeInsets.only(top: 20, bottom: 20),
                   child: ClipOval(
                     child: Image.network(
                       "https://wahswhirlwind.com/wp-content/uploads/2025/04/2673659_746f1.png",
@@ -309,7 +309,6 @@ class SecondPage extends StatelessWidget {
               padding: EdgeInsets.only(left: 10),
               width: double.infinity,
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Icon(Icons.tiktok),
                   Text("kamonthep001"),
