@@ -262,6 +262,7 @@ class SecondPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            SizedBox(height: 20,),
             Row(
               children: [
                 Container(
@@ -345,12 +346,12 @@ class SecondPage extends StatelessWidget {
               child: Row(
                 children: [
                   Image.network(
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_hSbtxBeQt7e5fUhiG8lCiw9h47bmimAOtg&s",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_2yQpF9wByb1JYWNv5GGGqouo-Qsr44cTVw&s",
                     width: 200,
                     height: 200,
                   ),SizedBox(width: 5,),
                   Image.network(
-                    "https://i.scdn.co/image/ab67616d00001e02b5005db1739bd89ebc9decce",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTpCkDLRe1iN0BPMIWu-TXbaMPYb51IsBYpQ&s",
                     width: 200,
                     height: 200,
                   ),
